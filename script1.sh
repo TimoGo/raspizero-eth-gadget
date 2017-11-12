@@ -9,5 +9,5 @@ test -f $1/config.txt || exit
 cp $1/config.txt $1/config.txt.sik
 touch $1/ssh
 # append in lines with "console=" in it
-sed -i.sik '/console=/ s/$/ modules-load=dwc2,g_ether/' cmdline.txt
+sed -i.sik '/console=/ s/$/ modules-load=dwc2,g_ether/' $1/cmdline.txt
 echo "dtoverlay=dwc2" >> $1/config.txt
